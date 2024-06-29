@@ -21,4 +21,15 @@ describe("routers Test", () => {
     expect(response.status).toBe(200);
     expect(response.text).toBe("DEFAULT");
   })
+
+  it("/message test", async () => {
+    const response = await request(app).get("/message");
+    expect(response.status).toBe(200);
+    expect(response.text).toBe("Message");
+  })
+
+  it("/Error test", async () => {
+    const response = await request(app).get("/error");
+    expect(response.status).toBe(404);
+  })
 })
