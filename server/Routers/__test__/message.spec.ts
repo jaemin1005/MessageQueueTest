@@ -6,8 +6,8 @@ describe("/message Test", () => {
   
   let server : Server
 
-  beforeEach((done) => {
-    server = app.listen(3000, done);
+  beforeAll(() => {
+    server = app.listen(3000);
   })
 
   afterAll((done) => {
@@ -18,5 +18,10 @@ describe("/message Test", () => {
     const response = await request(app).get("/message");
     expect(response.status).toBe(200);
     expect(response.text).toBe("Message");
+  })
+
+  it("/Error Test", async () => {
+    const response = await request(app).get("/message/Error");
+    expect(response.status).toBe(404);
   })
 })
