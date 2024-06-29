@@ -1,7 +1,7 @@
 import { IQueueNode, QueueNode } from "./node"
 import { deepCopy } from "../DeepCopy";
 
-class Queue<T> {
+export class Queue<T> {
   protected front: QueueNode<T> | null
   protected rear: QueueNode<T> | null
 
