@@ -4,7 +4,7 @@ import router from "./Routers/routers";
 const app = express();
 
 app.use(express.json());
-app.use('routers', router);
+app.use('/', router);
 
 // app.listen(3000, () => {
 //   console.log("express : http://localhost:3000")
