@@ -3,7 +3,7 @@ import { Router } from "express";
 const router = Router();
 
 router.get('/', (req, res) => {
-  res.send("DEAFULT");
+  res.send("DEFAULT");
 })
 
 export default router;
